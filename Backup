@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T06:10:52.000Z",
+  "updatedAt": "2025-06-23T06:16:47.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -129,7 +129,7 @@
             "Date Created": "={{ $json.data[1].createdAt }}",
             "Last modified": "={{ $json.data[1].updatedAt }}",
             "N8N Url": "=https://workflows.zeriobox.com/workflow/{{ $json.data[1].n8n_id }}",
-            "Tag": "={{ $json.data[1].tag }}",
+            "Tag": "={{ $('n8n1').item.json.tags[0].name }}",
             "Github Url": "={{ $json.github }}",
             "Shared Url": "=https://drive.google.com/file/d/{{ $json.data[1].drive_id }}"
           },
@@ -1185,7 +1185,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "8e316a0f-ccf7-4219-997a-9aab9caa48ed",
+  "versionId": "c4bf67f2-497f-4c7f-ba5c-772e85d19ac8",
   "triggerCount": 1,
   "shared": [
     {
