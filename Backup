@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T05:43:36.000Z",
+  "updatedAt": "2025-06-23T05:57:19.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -129,7 +129,7 @@
             "Date Created": "={{ $json.data[1].createdAt }}",
             "Last modified": "={{ $json.data[1].updatedAt }}",
             "N8N Url": "=https://workflows.zeriobox.com/workflow/{{ $json.data[1].n8n_id }}",
-            "Tag": "=",
+            "Tag": "={{ $json.data[1].tag }}",
             "Github Url": "={{ $json.github }}",
             "Shared Url": "=https://drive.google.com/file/d/{{ $json.data[1].drive_id }}"
           },
@@ -665,14 +665,17 @@
         },
         "repository": {
           "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+          "value": "={{ $('Exist or not in Sheet').item.json.Tag }}",
+          "mode": "name"
+        },
+        "filePath": "={{ $('n8n2').item.json.name }}",
+        "binaryData": true,
+        "commitMessage": "Change commit by Peter"
       },
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
       "position": [
-        740,
+        800,
         -720
       ],
       "id": "7b47d8f1-9d83-4283-b310-4eb1d89c90db",
@@ -1083,7 +1086,13 @@
     },
     "Code6": {
       "main": [
-        []
+        [
+          {
+            "node": "GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "GitHub1": {
@@ -1151,6 +1160,17 @@
           }
         ]
       ]
+    },
+    "GitHub": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "settings": {
@@ -1183,7 +1203,7 @@
       }
     ]
   },
-  "versionId": "a30384cf-1838-4b57-8931-bf7ca78c8260",
+  "versionId": "185ee139-9492-488b-bc0c-dbe9a91ffb44",
   "triggerCount": 1,
   "shared": [
     {
