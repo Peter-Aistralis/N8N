@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T06:05:08.000Z",
+  "updatedAt": "2025-06-23T06:10:52.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -1184,26 +1184,8 @@
   "meta": {
     "templateCredsSetupCompleted": true
   },
-  "pinData": {
-    "Merge": [
-      {
-        "json": {
-          "github": "https://github.com/Peter-Aistralis/YouTube/blob/main/Backup"
-        }
-      },
-      {
-        "json": {
-          "drive_id": "12p7DcHCeRa5QiPJC3ROUUYHmjgpFy-Eh",
-          "createdAt": "2025-06-21T23:56:17.734Z",
-          "updatedAt": "2025-06-23T05:23:47.000Z",
-          "n8n_id": "4fJhwfUZLcYvncO6",
-          "name": "Backup",
-          "tag": "youtube"
-        }
-      }
-    ]
-  },
-  "versionId": "96e2c76f-27be-48d9-9335-5a6e63ce39e5",
+  "pinData": {},
+  "versionId": "8e316a0f-ccf7-4219-997a-9aab9caa48ed",
   "triggerCount": 1,
   "shared": [
     {
