@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T05:57:19.000Z",
+  "updatedAt": "2025-06-23T06:05:08.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -11,8 +11,8 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -1360,
-        -75
+        -1580,
+        -80
       ],
       "id": "39c928e6-153c-47af-bb16-94f656b36453",
       "name": "When clicking ‘Test workflow’"
@@ -25,8 +25,8 @@
       "type": "n8n-nodes-base.n8n",
       "typeVersion": 1,
       "position": [
-        -1140,
-        -75
+        -1380,
+        -220
       ],
       "id": "d964a544-28a1-4789-a4d7-2854baa1ae3e",
       "name": "n8n",
@@ -44,8 +44,8 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        -920,
-        -75
+        -1140,
+        -220
       ],
       "id": "f0da239b-e21a-4f88-a465-159b50e1766a",
       "name": "Loop Over Items"
@@ -58,8 +58,8 @@
       "name": "Code",
       "type": "n8n-nodes-base.code",
       "position": [
-        180,
-        80
+        80,
+        160
       ],
       "typeVersion": 2
     },
@@ -92,8 +92,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        -480,
-        -150
+        -640,
+        -200
       ],
       "id": "3efc5de7-ab31-443c-9280-c1bbd93b8de2",
       "name": "Google Sheets",
@@ -208,8 +208,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1420,
-        -40
+        1360,
+        0
       ],
       "id": "36665884-b798-42e6-9156-d1a1ea5787d4",
       "name": "Google Sheets1",
@@ -248,8 +248,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -260,
-        -150
+        -420,
+        -200
       ],
       "id": "1f5d99c3-65f7-4ff6-8aef-efd950ae6e33",
       "name": "Exist or not in Sheet"
@@ -281,8 +281,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -80,
-        -440
+        -200,
+        -460
       ],
       "id": "0ed02a0c-345a-44b3-adde-3435378ffc76",
       "name": "updated or not"
@@ -379,8 +379,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1060,
-        -400
+        1000,
+        -300
       ],
       "id": "bbcbe318-3c8b-4425-89c4-23bad703ecac",
       "name": "Google Sheets2",
@@ -409,7 +409,7 @@
       "typeVersion": 3.4,
       "position": [
         1480,
-        -680
+        -740
       ],
       "id": "2e3548f6-f36e-43d2-8416-68d42cb35c7c",
       "name": "Edit Fields"
@@ -427,8 +427,8 @@
       "type": "n8n-nodes-base.n8n",
       "typeVersion": 1,
       "position": [
-        -60,
-        -40
+        -200,
+        20
       ],
       "id": "c5c6e5c3-6477-4282-9178-72c208c3a622",
       "name": "n8n1",
@@ -457,8 +457,8 @@
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        440,
-        80
+        360,
+        160
       ],
       "id": "167a49a7-dffc-457d-8807-cb3110ccd24c",
       "name": "Google Drive",
@@ -482,8 +482,8 @@
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        180,
-        -400
+        80,
+        -360
       ],
       "id": "472a598e-3e46-4edd-907e-4d2bc2c5790b",
       "name": "Google Drive1",
@@ -507,8 +507,8 @@
       "type": "n8n-nodes-base.n8n",
       "typeVersion": 1,
       "position": [
-        400,
-        -400
+        320,
+        -360
       ],
       "id": "72735bdf-04cc-477c-88df-dcd6db2f4112",
       "name": "n8n2",
@@ -527,8 +527,8 @@
       "name": "Code1",
       "type": "n8n-nodes-base.code",
       "position": [
-        620,
-        -400
+        520,
+        -300
       ],
       "typeVersion": 2
     },
@@ -550,8 +550,8 @@
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        840,
-        -400
+        780,
+        -300
       ],
       "id": "dce38604-7fb8-4a3c-873b-8605077bf6ae",
       "name": "Google Drive2",
@@ -582,8 +582,8 @@
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
       "position": [
-        400,
-        -160
+        340,
+        -100
       ],
       "id": "282a0b46-8ae4-42cf-9bb2-3662770f62a3",
       "name": "GitHub1",
@@ -603,8 +603,8 @@
       "name": "Code5",
       "type": "n8n-nodes-base.code",
       "position": [
-        140,
-        -160
+        80,
+        -100
       ],
       "typeVersion": 2
     },
@@ -615,8 +615,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        -700,
-        -150
+        -920,
+        -200
       ],
       "id": "a74ba28e-838d-4de6-ae66-76eb06d068c4",
       "name": "Wait",
@@ -635,7 +635,7 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        -1380,
+        -1600,
         -320
       ],
       "id": "bc5d2ad8-2413-40e1-b4cb-d548bd725ff7",
@@ -650,7 +650,7 @@
       "type": "n8n-nodes-base.code",
       "position": [
         520,
-        -720
+        -480
       ],
       "typeVersion": 2
     },
@@ -665,18 +665,18 @@
         },
         "repository": {
           "__rl": true,
-          "value": "={{ $('Exist or not in Sheet').item.json.Tag }}",
+          "value": "={{ $('Exist or not in Sheet').first()\n.json.Tag }}",
           "mode": "name"
         },
-        "filePath": "={{ $('n8n2').item.json.name }}",
+        "filePath": "={{ $('n8n2').first().json.name }}",
         "binaryData": true,
         "commitMessage": "Change commit by Peter"
       },
       "type": "n8n-nodes-base.github",
       "typeVersion": 1.1,
       "position": [
-        800,
-        -720
+        780,
+        -480
       ],
       "id": "7b47d8f1-9d83-4283-b310-4eb1d89c90db",
       "name": "GitHub",
@@ -705,8 +705,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        600,
-        -160
+        580,
+        -100
       ],
       "id": "2bb72a75-c8a6-4b4d-a61b-dc5cd7541024",
       "name": "Edit Fields1"
@@ -758,8 +758,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        660,
-        80
+        580,
+        160
       ],
       "id": "fb0f61d4-4a99-436b-aea4-69763f1b8bd1",
       "name": "Edit Fields2"
@@ -769,8 +769,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.2,
       "position": [
-        900,
-        -40
+        820,
+        20
       ],
       "id": "b685ee5c-4b8a-4d4b-8610-e855f3ff0e8d",
       "name": "Merge"
@@ -828,8 +828,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1240,
-        -40
+        1200,
+        0
       ],
       "id": "bede33a1-08f5-4b01-9e39-93d6d7d93a28",
       "name": "Edit Fields3"
@@ -842,8 +842,8 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        1080,
-        -40
+        1020,
+        20
       ],
       "id": "684da5fb-b8f8-4f2a-8d94-65e19d148772",
       "name": "Aggregate"
@@ -1203,7 +1203,7 @@
       }
     ]
   },
-  "versionId": "185ee139-9492-488b-bc0c-dbe9a91ffb44",
+  "versionId": "96e2c76f-27be-48d9-9335-5a6e63ce39e5",
   "triggerCount": 1,
   "shared": [
     {
