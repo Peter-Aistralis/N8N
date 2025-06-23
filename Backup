@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T06:16:47.000Z",
+  "updatedAt": "2025-06-23T06:26:56.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -292,24 +292,23 @@
         "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
-          "value": "1sj-LmWDihOKsbJ_GXaYW4LBA1GcU3hy-ihutCE2224s",
+          "value": "1eiKcnWhkZmTJbhvvtLHhp9D3CCtTW3_awRTBTNy2ByQ",
           "mode": "list",
-          "cachedResultName": "Automations",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1sj-LmWDihOKsbJ_GXaYW4LBA1GcU3hy-ihutCE2224s/edit?usp=drivesdk"
+          "cachedResultName": "Backups",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eiKcnWhkZmTJbhvvtLHhp9D3CCtTW3_awRTBTNy2ByQ/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
           "value": "gid=0",
           "mode": "list",
           "cachedResultName": "Sheet1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1sj-LmWDihOKsbJ_GXaYW4LBA1GcU3hy-ihutCE2224s/edit#gid=0"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eiKcnWhkZmTJbhvvtLHhp9D3CCtTW3_awRTBTNy2ByQ/edit#gid=0"
         },
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Title": "={{ $json.name }}",
-            "Last modified": "={{ $('Loop Over Items').item.json.updatedAt }}",
-            "Shared Url": "=https://drive.google.com/file/d/{{ $json.id }}"
+            "Title": "={{ $('Code1').item.json.name }}",
+            "Last modified": "={{ $('Code1').item.json.updatedAt }}"
           },
           "matchingColumns": [
             "Title"
@@ -324,6 +323,15 @@
               "type": "string",
               "canBeUsedToMatch": true,
               "removed": false
+            },
+            {
+              "id": "Tag",
+              "displayName": "Tag",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
             },
             {
               "id": "Date Created",
@@ -1185,7 +1193,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "c4bf67f2-497f-4c7f-ba5c-772e85d19ac8",
+  "versionId": "d367ccf2-718a-4de8-a4a8-e5484e270597",
   "triggerCount": 1,
   "shared": [
     {
