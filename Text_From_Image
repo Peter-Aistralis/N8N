@@ -1,0 +1,360 @@
+{
+  "createdAt": "2025-06-25T04:57:00.714Z",
+  "updatedAt": "2025-06-25T04:58:17.000Z",
+  "id": "5sycK2aIikzRoxNk",
+  "name": "Text_From_Image",
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        100
+      ],
+      "id": "2f957d90-f8d0-41b9-9998-6b30fce166a7",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cloud.llamaindex.ai/api/v1/parsing/upload",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "premium_mode",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -660,
+        100
+      ],
+      "id": "f31acc43-98d6-4373-a0c6-d1e170a0557e",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "kgIypX8oDeKk19T0",
+          "name": "LlamaIndex"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.cloud.llamaindex.ai/api/v1/parsing/job/{{ $json.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -440,
+        100
+      ],
+      "id": "a4d683a8-6591-4972-8d65-da74240db399",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "kgIypX8oDeKk19T0",
+          "name": "LlamaIndex"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "SUCCESS",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "be521e05-d068-4007-93c5-d86513cf2764"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "95afc78b-ec63-4e4e-8ea2-6116579f8df9",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "PENDING",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -220,
+        100
+      ],
+      "id": "93ffddab-f1f3-4912-92f5-897098ed91f7",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        200
+      ],
+      "id": "a42f03b8-e455-45fc-91c8-88d67b6efd0e",
+      "name": "Wait",
+      "webhookId": "e0ee6147-88e4-42ba-87eb-6a2e033c254a"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.cloud.llamaindex.ai/api/v1/parsing/job/{{ $json.id }}/result/raw/markdown",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "87e8be56-3dec-4f12-a72d-3cf19e232745",
+      "name": "HTTP Request2",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "kgIypX8oDeKk19T0",
+          "name": "LlamaIndex"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "https://drive.google.com/file/d/1V6b0750C_Jmu7eLTgjxnfveXiYpX3oXf",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -880,
+        100
+      ],
+      "id": "1ff7adb9-120c-468f-bc03-9cb50950ca81",
+      "name": "Download file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "U8t8mDjwMMO8YhdJ",
+          "name": "Google Drive account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Download file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "ff226208-f56f-42f9-a46e-b860b8d9a5c5",
+  "triggerCount": 0,
+  "shared": [
+    {
+      "createdAt": "2025-06-25T04:57:00.723Z",
+      "updatedAt": "2025-06-25T04:57:00.723Z",
+      "role": "workflow:owner",
+      "workflowId": "5sycK2aIikzRoxNk",
+      "projectId": "BdqN6hW8Ys5p6Qob",
+      "project": {
+        "createdAt": "2025-06-21T23:23:36.016Z",
+        "updatedAt": "2025-06-21T23:46:25.191Z",
+        "id": "BdqN6hW8Ys5p6Qob",
+        "name": "Peter W <peterjawel@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "projectRelations": [
+          {
+            "createdAt": "2025-06-21T23:23:36.017Z",
+            "updatedAt": "2025-06-21T23:23:36.017Z",
+            "role": "project:personalOwner",
+            "userId": "fe9fcf05-4a1d-47b4-a16f-8f200880fb31",
+            "projectId": "BdqN6hW8Ys5p6Qob",
+            "user": {
+              "createdAt": "2025-06-21T23:23:35.368Z",
+              "updatedAt": "2025-06-25T05:58:01.010Z",
+              "id": "fe9fcf05-4a1d-47b4-a16f-8f200880fb31",
+              "email": "peterjawel@gmail.com",
+              "firstName": "Peter",
+              "lastName": "W",
+              "personalizationAnswers": {
+                "version": "v4",
+                "personalization_survey_submitted_at": "2025-06-21T23:46:50.515Z",
+                "personalization_survey_n8n_version": "1.98.2",
+                "companySize": "<20",
+                "companyType": "saas",
+                "role": "business-owner",
+                "reportedSource": "youtube"
+              },
+              "settings": {
+                "userActivated": true,
+                "firstSuccessfulWorkflowId": "4fJhwfUZLcYvncO6",
+                "userActivatedAt": 1750730431147,
+                "easyAIWorkflowOnboarded": true
+              },
+              "role": "global:owner",
+              "disabled": false,
+              "mfaEnabled": false,
+              "isPending": false
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tags": [
+    {
+      "createdAt": "2025-06-22T07:40:38.448Z",
+      "updatedAt": "2025-06-22T07:40:38.448Z",
+      "id": "BGN2hok7R5Ooic8u",
+      "name": "YouTube"
+    }
+  ]
+}
