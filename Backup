@@ -1,6 +1,6 @@
 {
   "createdAt": "2025-06-21T23:56:17.734Z",
-  "updatedAt": "2025-06-23T06:26:56.000Z",
+  "updatedAt": "2025-06-28T21:47:40.000Z",
   "id": "4fJhwfUZLcYvncO6",
   "name": "Backup",
   "active": true,
@@ -635,7 +635,7 @@
         "rule": {
           "interval": [
             {
-              "triggerAtHour": 4
+              "triggerAtHour": 1
             }
           ]
         }
@@ -1193,7 +1193,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "d367ccf2-718a-4de8-a4a8-e5484e270597",
+  "versionId": "21b61746-db9c-467e-b995-77946ae63f43",
   "triggerCount": 1,
   "shared": [
     {
@@ -1209,6 +1209,7 @@
         "name": "Peter W <peterjawel@gmail.com>",
         "type": "personal",
         "icon": null,
+        "description": null,
         "projectRelations": [
           {
             "createdAt": "2025-06-21T23:23:36.017Z",
@@ -1218,7 +1219,7 @@
             "projectId": "BdqN6hW8Ys5p6Qob",
             "user": {
               "createdAt": "2025-06-21T23:23:35.368Z",
-              "updatedAt": "2025-06-21T23:46:50.000Z",
+              "updatedAt": "2025-06-28T04:40:36.239Z",
               "id": "fe9fcf05-4a1d-47b4-a16f-8f200880fb31",
               "email": "peterjawel@gmail.com",
               "firstName": "Peter",
@@ -1233,7 +1234,15 @@
                 "reportedSource": "youtube"
               },
               "settings": {
-                "userActivated": false
+                "userActivated": true,
+                "firstSuccessfulWorkflowId": "4fJhwfUZLcYvncO6",
+                "userActivatedAt": 1750730431147,
+                "easyAIWorkflowOnboarded": true,
+                "npsSurvey": {
+                  "waitingForResponse": true,
+                  "ignoredCount": 1,
+                  "lastShownAt": 1751085633341
+                }
               },
               "role": "global:owner",
               "disabled": false,
