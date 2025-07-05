@@ -1,9 +1,9 @@
 {
   "createdAt": "2025-07-05T05:27:31.126Z",
-  "updatedAt": "2025-07-05T11:06:51.208Z",
+  "updatedAt": "2025-07-05T11:16:03.177Z",
   "id": "2wGj4UwRo2mb42YJ",
   "name": "Backup",
-  "active": false,
+  "active": true,
   "isArchived": false,
   "nodes": [
     {
@@ -1184,13 +1184,17 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
   "meta": {
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
   "versionId": "661f61bc-b81c-4858-8dbe-817fb26fc093",
-  "triggerCount": 0,
+  "triggerCount": 1,
   "shared": [
     {
       "createdAt": "2025-07-05T05:27:31.126Z",
@@ -1215,7 +1219,7 @@
             "projectId": "2KiFcKNLK1JyaklJ",
             "user": {
               "createdAt": "2025-07-05T04:33:38.764Z",
-              "updatedAt": "2025-07-05T05:24:46.550Z",
+              "updatedAt": "2025-07-05T11:54:46.344Z",
               "id": "8790342e-b65e-4ef9-99ec-48a531aa0094",
               "email": "peterjawel@gmail.com",
               "firstName": "peter",
@@ -1230,8 +1234,10 @@
                 "reportedSource": "youtube"
               },
               "settings": {
-                "userActivated": false,
-                "easyAIWorkflowOnboarded": true
+                "userActivated": true,
+                "easyAIWorkflowOnboarded": true,
+                "firstSuccessfulWorkflowId": "FAkXhJwuAslD2JDu",
+                "userActivatedAt": 1751716484498
               },
               "role": "global:owner",
               "disabled": false,
